@@ -4,6 +4,8 @@ App({
   data: {
     
     code: '',
+    name: 'je',
+    name2: 'je3',
     wechatName: '',
     avatar: '',
     sex: '',

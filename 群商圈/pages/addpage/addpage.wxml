@@ -1,0 +1,107 @@
+
+<!--index.wxml-->
+
+<!--<view class="container">
+  <view bindtap="bindViewTap" class="userinfo">
+    <text>跳转到增加页面</text>
+  </view>
+  <view class="classname" bindtap="showMode">show</view>
+</view>-->
+
+<!--index.wxml-->
+<view class="wg-all">
+  <view class="we-order">
+    <textarea class="wg-input" bindinput="bindKeyInput" value="{{inputValue}}" placeholder="请填写您的需求" ></textarea>
+    <view class="weui-cells">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view class="weui-uploader">
+            <view class="weui-uploader__hd">
+
+              <!--<view class="weui-uploader__info">{{imageList.length}}/{{count[countIndex]}}</view>-->
+            </view>
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files">
+                <block wx:for="{{imageList}}" wx:for-item="image" wx:key="item">
+                  <view class="weui-uploader__file">
+                    <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+                  </view>
+                </block>
+              </view>
+              <view class="weui-uploader__input-box">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!--标签的添加-->
+    <view class="wg-buylist-keyword">
+
+      <!--<text class="wg-buylist-keyword-item" wx:for="{{article.tag}}" wx:key="index" wx:for-item="tag">{{tag}}</text>-->
+
+      <text class="wg-buylist-keyword-item" wx:if="{{showTag}}" wx:for="{{tagList}}" wx:key="index" wx:for-item="tag">{{tag}}</text>
+      <!--<text class="wg-buylist-keyword-item">求购22</text>-->
+      <input class="wg-buylist-keyword-input" placeholder="请输入标签" bindblur="bindBlurInput" bindinput="bindKeyInputTag"  value="{{blurValue}}"/>
+
+      <!--<text class="wg-buylist-keyword-item">求购22</text>
+          <text class="wg-buylist-keyword-item">鞋子</text>
+          <text class="wg-buylist-keyword-item">货号：325689</text>
+          <text class="wg-buylist-keyword-item">货号：325689</text>
+          <text class="wg-buylist-keyword-item">货号：325689</text>
+          <text class="wg-buylist-keyword-item">货号：325689</text>-->
+    </view>
+
+    <!--<view class="wg-input-images">
+      <image class="wg-input-img" src="{{imgUrl}}" bindtap="choosePhoto"></image>
+    </view>-->
+  </view>
+  <view class="wg-address" bindtap="chooseLocation">
+    <view class="wg-address-ding">
+      <image class="wg-curaddress" src="../../icons/定位.png"></image>
+      <block wx:if="{{hasLocation === false}}">
+        <text class="wg-noslect">所在位置</text>
+      </block>
+      <block wx:if="{{hasLocation === true}}">
+        <text class="wg-body-text">{{locationAddress}}</text>
+      </block>
+    </view>
+  </view>
+  <view class="wg-save">
+    <view class="wg-centerPage-save-btn" bindtap="saveUserInfo">保存</view>
+  </view>
+
+  <!--<view class="wg-customer">
+    <view class="wg-customer-item">
+      <view>
+        <image class="wg-customer-item-img" src="../../icons/求购-潜在客户.png"></image>
+      </view>
+      <view class="wg-customer-item-text">
+        <text class="wg-text-left">潜在客户:</text>
+        <text class="wg-text-right">999</text>
+      </view>
+    </view>
+    <view class="wg-customer-item">
+      <view catchtap="dianZan">
+        <image wx:if="{{!showDianZan}}" class="wg-customer-item-img" src="../../icons/求购-点赞.png"></image>
+        <image wx:if="{{showDianZan}}" class="wg-customer-item-img" src="../../icons/求购-点赞2.png"></image>
+      </view>
+      <view class="wg-customer-item-text">
+        <text class="wg-text-left">点赞:</text>
+        <text class="wg-text-right">999</text>
+      </view>
+    </view>
+    <view class="wg-customer-item">
+      <view catchtap="shouCang">
+        <image wx:if="{{!showShouCang}}" class="wg-customer-item-img" src="../../icons/求购-收藏.png"></image>
+        <image wx:if="{{showShouCang}}" class="wg-customer-item-img" src="../../icons/求购-收藏2.png"></image>
+      </view>
+      <view class="wg-customer-item-text">
+        <text class="wg-text-left">收藏:</text>
+        <text class="wg-text-right">999</text>
+      </view>
+    </view>
+  </view>-->
+</view>

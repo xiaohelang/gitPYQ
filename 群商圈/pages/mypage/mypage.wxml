@@ -1,0 +1,53 @@
+
+<!--index.wxml-->
+<view class="wg-mypage">
+
+  <!--<view class="container">
+  <view bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text>我的</text>
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>-->
+  <view class="wg-mypage-userinfo">
+    <navigator url="../../pages/mypage/baseinfo/baseinfo"  hover-class="navigator-hover">
+      <view class="wg-userinfo wg-li-border">
+        <image class="wg-userinfo-avatar" src="{{userInfo.avatar}}" background-size="cover"></image>
+        <view class="wg-userinfo-nameinfo">
+          <text class="wg-nameinfo-name">{{userInfo.nickname}}</text>
+          <text class="wg-nameinfo-name">{{userInfo.company}}</text>
+          <text class="wg-nameinfo-name">{{userInfo.phoneMob}}</text>
+        </view>
+      </view>
+    </navigator>
+    <view class="wg-buy-view wg-li-border">
+      <!--<navigator url="../../pages/mypage/buyrecord/buyrecord" hover-class="navigator-hover">-->
+        <!--<view class="wg-li" bindtap="bindViewTap">
+          <view class="wg-li-in wg-li-in-line">
+            <image class="wg-buyrecord-img" src="../../icons/求购记录.png"></image>
+            <text>求购记录</text>
+          </view>
+        </view>-->
+      <!--</navigator>-->
+      <navigator url="../../pages/mypage/lookrecord/lookrecord" hover-class="navigator-hover">
+        <view class="wg-li">
+          <view class="wg-li-in">
+            <image class="wg-buyrecord-img" src="../../icons/查看记录.png"></image>
+            <text>查看记录</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <navigator url="../../pages/mypage/about/about" hover-class="navigator-hover">
+      <view class="wg-li wg-li-border">
+        <view class="wg-li-in">
+          <image class="wg-buyrecord-img" src="../../icons/关于.png"></image>
+          <text>关于商群圈</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>
